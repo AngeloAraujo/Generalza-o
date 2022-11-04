@@ -1,19 +1,15 @@
 package Item;
 
-public class Livro extends Item {
+public class Livro extends Item{
 
 	private String autor;
 
 	public Livro() {
-		super();
-		// TODO Auto-generated constructor stub
+		
 	}
-
-	public Livro(int codigo, String descricao,String autor) {
-		super(codigo, descricao);
+	public Livro (String autor) {
 		setAutor(autor);
 	}
-
 	public String getAutor() {
 		return autor;
 	}
@@ -26,11 +22,10 @@ public class Livro extends Item {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Livro [autor=");
+		builder.append("Livro Autor=");
 		builder.append(autor);
-		builder.append(", toString()=");
+		builder.append(", ");
 		builder.append(super.toString());
-		builder.append("]");
 		return builder.toString();
 	}
 	

@@ -3,27 +3,34 @@ package Item;
 public class ItemMain {
 
 	public static void main(String[] args) {
+
+		Item i = new Item(1,"Abacate");
+		System.out.println(i);
 		
-		//Item
-		Item A= new Item(1, "Livro");
-		System.out.println(A);
-				
-		//Livro
-		Livro B= new Livro(1, "Livro de Terror", "Stephen King");
-		System.out.println(B);
-	
-		//Midia
-		Midia desc = new Midia(2, "The Killers", "Universal", 120);
-		System.out.println(desc);
+		Livro l = new Livro("Curvello");
+		l.setCodigo(103);
+		l.setDescricao("Um livro top");
+		System.out.println(l);
 		
-		// Cd
-		Cd D = new Cd(2, "Rock", "Sony", 115, 16, "The Strokes", "The new Abnormal");
-		System.out.println(D);
+		Midia m = new Midia("Som Livre", 23.5f);
+		m.setCodigo(10);
+		m.setDescricao("Amado Batista");
+		System.out.println(m);
 		
-		//VHS
-		Vhs E = new Vhs(3, "Comédia", "Revolution Studios", 109, "As Branquelas");
-		System.out.println(E);
-	
+		VHS v = new VHS("ET");
+		v.setCodigo(201);
+		v.setDescricao("Filme ET");
+		v.setGravadora("Disney");
+		v.setDuracao(23.5f);
+		
+		System.out.println(v);
+		
+		CD cd = new CD(10, "Xuxa", "Lua de Cristal");
+		cd.setCodigo(50);
+		cd.setDescricao("Um cd velho");
+		cd.setGravadora("Sony");
+		cd.setDuracao(65f);
+		System.out.println(cd);
 	}
 
 }

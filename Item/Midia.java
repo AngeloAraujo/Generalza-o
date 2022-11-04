@@ -1,48 +1,46 @@
 package Item;
 
-public class Midia extends Item{
+public class Midia extends Item {
+
+	private String gravadora;
+	private float duracao;
 	
-	protected String gravadora;
-	protected int duracao;
 	
 	public Midia() {
-		super();
 		
 	}
-	public Midia(int codigo, String descricao, String gravadora, int duracao) {
-		super(codigo, descricao);
+	
+	public Midia(String gravadora, float duracao) {
 		setGravadora(gravadora);
 		setDuracao(duracao);
-		
 	}
+
 	public String getGravadora() {
 		return gravadora;
 	}
+
 	public void setGravadora(String gravadora) {
 		if (gravadora.length()>0)
-		this.gravadora = gravadora;
+			this.gravadora = gravadora;
 	}
-	public int getDuracao() {
+	public float getDuracao() {
 		return duracao;
 	}
-	public void setDuracao(int duracao) {
+	public void setDuracao(float duracao) {
 		if (duracao>0)
-		this.duracao = duracao;
+			this.duracao = duracao;
 	}
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Midia [gravadora=");
+		builder.append("Midia Gravadora=");
 		builder.append(gravadora);
 		builder.append(", duracao=");
 		builder.append(duracao);
-		builder.append(", toString()=");
+		builder.append(", ");
 		builder.append(super.toString());
-		builder.append("]");
 		return builder.toString();
 	}
 	
-	
-	
-
 }

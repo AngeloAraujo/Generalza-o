@@ -1,36 +1,33 @@
 package Item;
 
-public class Vhs extends Midia {
+public class VHS extends Midia {
 
 	private String titulo;
 
-	public Vhs() {
-		super();
-		// TODO Auto-generated constructor stub
+	public VHS() {
+		
 	}
-
-	public Vhs(int codigo, String descricao, String gravadora, int duracao, String titulo) {
-		super(codigo, descricao, gravadora, duracao);
+	
+	public VHS(String titulo) {
 		setTitulo(titulo);
 	}
-
+	
 	public String getTitulo() {
 		return titulo;
 	}
 
 	public void setTitulo(String titulo) {
-		if(titulo.length()>0)
-		this.titulo = titulo;
+		if (titulo.length()>0)
+			this.titulo = titulo;
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Vhs [titulo=");
+		builder.append("VHS Titulo=");
 		builder.append(titulo);
-		builder.append(", toString()=");
+		builder.append(", ");
 		builder.append(super.toString());
-		builder.append("]");
 		return builder.toString();
 	}
 	
